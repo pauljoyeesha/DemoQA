@@ -1,0 +1,903 @@
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>qaclickacademy</groupId>
+  <artifactId>Mavenjava</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Mavenjava</name>
+  <url>http://maven.apache.org</url>
+  
+ <properties>
+
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+  <maven.compiler.source>1.7</maven.compiler.source>
+
+ 
+
+    <maven.compiler.target>1.7</maven.compiler.target>
+
+  </properties>
+
+ 
+
+  
+
+ 
+
+ 
+
+<dependencies>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver -->
+
+<dependency>
+
+    <groupId>org.seleniumhq.selenium</groupId>
+
+    <artifactId>selenium-htmlunit-driver</artifactId>
+
+    <version>2.52.0</version>
+
+</dependency>
+
+ 
+
+<dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+
+ 
+
+    <groupId>org.apache.pdfbox</groupId>
+
+    <artifactId>pdfbox</artifactId>
+
+    <version>2.0.16</version>
+
+ 
+
+</dependency>
+
+<dependency>
+
+    <groupId>io.rest-assured</groupId>
+
+    <artifactId>rest-assured</artifactId>
+
+    <version>4.2.0</version>
+
+    <scope>test</scope>
+
+</dependency>
+
+ 
+
+<!-- <dependency> -->
+
+<!--     <groupId>io.rest-assured</groupId> -->
+
+<!--     <artifactId>rest-assured</artifactId> -->
+
+<!--     <version>4.2.0</version> -->
+
+<!--     <scope>test</scope> -->
+
+<!-- </dependency> -->
+
+<dependency>
+
+<groupId>io.rest-assured</groupId>
+
+<artifactId>json-schema-validator</artifactId>
+
+<version>4.2.0</version>
+
+<scope>test</scope>
+
+</dependency>
+
+<dependency>
+
+<groupId>io.rest-assured</groupId>
+
+<artifactId>xml-path</artifactId>
+
+<version>4.2.0</version>
+
+<scope>test</scope>
+
+</dependency>
+
+ 
+
+ 
+
+  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
+<dependency>
+
+    <groupId>org.apache.poi</groupId>
+
+    <artifactId>poi</artifactId>
+
+    <version>4.1.2</version>
+
+</dependency>
+
+ 
+
+<dependency>
+
+    <groupId>org.apache.commons</groupId>
+
+    <artifactId>commons-lang3</artifactId>
+
+    <version>3.9</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+
+<dependency>
+
+    <groupId>org.junit.platform</groupId>
+
+    <artifactId>junit-platform-launcher</artifactId>
+
+    <version>1.5.2</version>
+
+    <scope>test</scope>
+
+</dependency>
+
+<!-- <dependency> -->
+
+<!--     <groupId>com.vimalselvam</groupId> -->
+
+<!--     <artifactId>cucumber-extentsreport</artifactId> -->
+
+<!--     <version>1.1.0</version> -->
+
+<!-- </dependency> -->
+<dependency>
+    <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>2.0.5</version>
+</dependency>
+
+<dependency>
+
+    <groupId>xml-apis</groupId>
+
+    <artifactId>xml-apis</artifactId>
+
+    <version>1.4.01</version>
+
+</dependency>
+
+<dependency>
+
+        <groupId>info.cukes</groupId>
+
+        <artifactId>cucumber-testng</artifactId>
+
+        <version>1.2.4</version>
+
+    </dependency>
+
+  
+
+<dependency>
+
+                           <groupId>org.apache.commons</groupId>
+
+                           <artifactId>commons-collections4</artifactId>
+
+                           <version>4.1</version>
+
+                                  </dependency>
+
+<dependency>
+
+           <groupId>info.cukes</groupId>
+
+           <artifactId>cucumber-picocontainer</artifactId>
+
+           <version>1.2.5</version>
+
+           <scope>test</scope>
+
+       </dependency>
+
+<dependency>
+
+ 
+
+              <groupId>com.google.guava</groupId>
+
+ 
+
+              <artifactId>guava</artifactId>
+
+ 
+
+              <version>22.0</version>
+
+ 
+
+       </dependency>
+
+       <dependency>
+
+            <groupId>org.apache.maven.surefire</groupId>
+
+            <artifactId>surefire-junit47</artifactId>
+
+            <version>3.0.0-M1</version>
+
+          </dependency>
+
+       <dependency>
+
+ 
+
+      <groupId>junit</groupId>
+
+ 
+
+      <artifactId>junit</artifactId>
+
+ 
+
+      <version>4.13-beta-3</version>
+
+ 
+
+      <scope>test</scope>
+
+ 
+
+    </dependency>
+
+<dependency>
+
+ 
+
+<groupId>info.cukes</groupId>
+
+ 
+
+<artifactId>cucumber-java</artifactId>
+
+ 
+
+<version>1.2.5</version>
+
+ 
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+
+<dependency>
+
+    <groupId>info.cukes</groupId>
+
+    <artifactId>cucumber-junit</artifactId>
+
+    <version>1.2.4</version>
+
+    <scope>test</scope>
+
+</dependency>
+
+<dependency>
+
+ 
+
+    <groupId>info.cukes</groupId>
+
+ 
+
+    <artifactId>gherkin</artifactId>
+
+ 
+
+    <version>2.12.2</version>
+
+ 
+
+    <scope>provided</scope>
+
+ 
+
+</dependency>
+
+ 
+
+ 
+
+<!-- <dependency> -->
+
+<!--     <groupId>org.apache.poi</groupId> -->
+
+<!--     <artifactId>poi</artifactId> -->
+
+<!--     <version>4.1.0</version> -->
+
+<!-- </dependency> -->
+
+<dependency>
+
+    <groupId>org.apache.poi</groupId>
+
+    <artifactId>poi-ooxml</artifactId>
+
+    <version>4.1.0</version>
+
+</dependency>
+
+<dependency>
+
+ 
+
+    <groupId>log4j</groupId>
+
+ 
+
+    <artifactId>log4j</artifactId>
+
+ 
+
+    <version>1.2.16</version>
+
+ 
+
+</dependency>
+
+<dependency>
+
+ 
+
+    <groupId>info.cukes</groupId>
+
+ 
+
+    <artifactId>cucumber-core</artifactId>
+
+ 
+
+    <version>1.2.5</version>
+
+ 
+
+</dependency>
+
+ 
+
+ 
+
+               
+
+       
+
+       <dependency>
+
+      
+
+ 
+
+  <groupId>org.testng</groupId>
+
+ 
+
+  <artifactId>testng</artifactId>
+
+ 
+
+<version>6.14.3</version>
+
+ 
+
+ 
+
+  <scope>test</scope>
+
+</dependency>
+
+<dependency>
+
+        <groupId>org.junit.jupiter</groupId>
+
+        <artifactId>junit-jupiter-api</artifactId>
+
+        <version>5.4.2</version>
+
+        <scope>test</scope>
+
+    </dependency>
+
+    <dependency>
+
+        <groupId>org.junit.jupiter</groupId>
+
+        <artifactId>junit-jupiter-engine</artifactId>
+
+        <version>5.4.2</version>
+
+        <scope>test</scope>
+
+    </dependency>
+
+<dependency>
+
+    <groupId>org.seleniumhq.selenium</groupId>
+
+    <artifactId>selenium-java</artifactId>
+
+        <version>3.141.59</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
+
+ 
+
+        <dependency>
+
+ 
+
+              <groupId>org.seleniumhq.selenium</groupId>
+
+ 
+
+              <artifactId>selenium-server</artifactId>
+
+ 
+
+              <version>3.141.59</version>
+
+ 
+
+       </dependency>
+
+        <dependency>
+
+    <groupId>org.seleniumhq.selenium</groupId>
+
+    <artifactId>selenium-support</artifactId>
+
+    <version>3.141.59</version>
+
+</dependency>
+
+<dependency>
+
+       <groupId>org.seleniumhq.selenium</groupId>
+
+       <artifactId>selenium-api</artifactId>
+
+       <version>3.141.59</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>dom4j</groupId>
+
+    <artifactId>dom4j</artifactId>
+
+    <version>1.6.1</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+
+<dependency>
+
+    <groupId>com.beust</groupId>
+
+    <artifactId>jcommander</artifactId>
+
+    <version>1.78</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+
+<dependency>
+
+    <groupId>com.jayway.jsonpath</groupId>
+
+    <artifactId>json-path</artifactId>
+
+    <version>2.0.0</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>com.googlecode.json-simple</groupId>
+
+    <artifactId>json-simple</artifactId>
+
+    <version>1.1</version>
+
+</dependency>
+
+ 
+
+ 
+
+<dependency>
+
+    <groupId>commons-io</groupId>
+
+    <artifactId>commons-io</artifactId>
+
+    <version>2.6</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>jaxen</groupId>
+
+    <artifactId>jaxen</artifactId>
+
+    <version>1.2.0</version>
+
+</dependency>
+
+<!-- <dependency> -->
+
+<!-- <groupId>com.vimalselvam</groupId> -->
+
+ 
+
+<!-- <artifactId>cucumber-extentsreport</artifactId> -->
+
+ 
+
+<!-- <version>2.0.5</version> -->
+
+ 
+
+<!-- </dependency> -->
+
+<dependency>
+
+<groupId>com.aventstack</groupId>
+
+<artifactId>extentreports</artifactId>
+
+<version>3.1.2</version>
+
+</dependency>
+
+<dependency>
+
+  <groupId>org.apache.maven.plugins</groupId>
+
+  <artifactId>maven-compiler-plugin</artifactId>
+
+  <version>2.4</version>
+
+  <type>maven-plugin</type>
+
+</dependency>
+
+ 
+
+  </dependencies>
+
+ 
+
+  <build>
+<testResources>
+            <testResource>
+                <directory>src/test/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </testResource>
+        </testResources>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+
+      <plugins>
+
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+
+        <plugin>
+
+          <artifactId>maven-clean-plugin</artifactId>
+
+          <version>3.1.0</version>
+
+        </plugin>
+
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+
+        <plugin>
+
+          <artifactId>maven-resources-plugin</artifactId>
+
+          <version>3.0.2</version>
+
+        </plugin>
+
+        <plugin>
+
+                           <groupId>org.apache.maven.plugins</groupId>
+
+                           <artifactId>maven-source-plugin</artifactId>
+
+                           <version>3.0.1</version>
+
+                     </plugin>
+
+             
+
+   
+
+                     <plugin>
+
+                           <groupId>org.apache.maven.plugins</groupId>
+
+                           <artifactId>maven-compiler-plugin</artifactId>
+
+                           <version>2.4</version>
+
+                           <configuration>
+
+                                  <source>1.8</source>
+
+                                  <target>1.8</target>
+
+                                  <encoding>${project.build.sourceEncoding}</encoding>
+
+                           </configuration>
+
+                     </plugin>
+
+<!--         <plugin> -->
+
+<!--           <artifactId>maven-compiler-plugin</artifactId> -->
+
+<!--           <version>2.4</version> -->
+
+<!--         </plugin> -->
+
+        <plugin>
+
+          <artifactId>maven-surefire-plugin</artifactId>
+
+          <version>3.0.0-M1</version>
+
+        </plugin>
+
+        <plugin>
+
+          <artifactId>maven-jar-plugin</artifactId>
+
+          <version>3.0.2</version>
+
+        </plugin>
+
+        <plugin>
+
+                           <groupId>org.apache.maven.plugins</groupId>
+
+                           <artifactId>maven-jar-plugin</artifactId>
+
+                           <version>3.0.2</version>
+
+                           <executions>
+
+                                  <execution>
+
+                                         <goals>
+
+                                                <goal>test-jar</goal>
+
+                                         </goals>
+
+                                  </execution>
+
+                           </executions>
+
+                     </plugin>
+
+        <plugin>
+
+          <artifactId>maven-install-plugin</artifactId>
+
+          <version>2.5.2</version>
+
+        </plugin>
+
+        <plugin>
+
+    <groupId>org.apache.maven.plugins</groupId>
+
+    <artifactId>maven-dependency-plugin</artifactId>
+
+    <executions>
+
+      <execution>
+
+        <id>copy-dependencies</id>
+
+        <phase>package</phase>
+
+        <goals>
+
+          <goal>copy-dependencies</goal>
+
+        </goals>
+
+       
+
+        <configuration>
+
+          <outputDirectory>${project.build.directory}/testng.xml</outputDirectory>
+
+          <overWriteReleases>false</overWriteReleases>
+
+          <overWriteSnapshots>false</overWriteSnapshots>
+
+          <overWriteIfNewer>true</overWriteIfNewer>
+
+        </configuration>
+
+      </execution>
+
+    </executions>
+
+</plugin>
+
+        <plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-surefire-plugin</artifactId>
+
+<version>3.0.0-M1</version>
+
+  <configuration>
+
+  <forkCount>7</forkCount>
+
+  <reuseForks>true</reuseForks>
+
+  <includes>
+
+  <include>**.java</include>
+
+  </includes>
+
+   <testFailureIgnore>true</testFailureIgnore>
+
+ 
+
+    <configuration>
+
+    <parallel>classes</parallel>
+
+    <threadCount>4</threadCount>
+
+</configuration>
+
+</configuration>
+
+
+</plugin>
+
+ 
+
+        <plugin>
+
+       
+
+          <artifactId>maven-deploy-plugin</artifactId>
+
+          <version>2.8.2</version>
+
+        </plugin>
+
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+
+        <plugin>
+
+          <artifactId>maven-site-plugin</artifactId>
+
+          <version>3.7.1</version>
+
+        </plugin>
+
+        <plugin>
+
+<groupId>com.github.temyers</groupId>
+
+<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+
+<version>4.0.0</version>
+
+<executions>
+
+<execution>
+
+<id>generateRunners</id>
+
+<phase>validate</phase>
+
+<goals>
+
+<goal>generateRunners</goal>
+
+</goals>
+
+<configuration>
+
+<glue>
+
+<pakages>
+
+<pakage>StepDefinition</pakage>
+
+<pakage>ReusableStepDefinitionFile</pakage>
+
+ 
+
+</pakages>
+
+
+ </glue>
+
+<featuresDirectory>src/test/java/qaclickacademy/Feature</featuresDirectory>
+
+<cucumberOutputDir>${project.build.directory}/cucumber-parallel</cucumberOutputDir>
+
+<format>json,html</format>
+
+<tags>
+
+<tag>~@sample1</tag>
+
+ </tags>
+
+</configuration>
+
+</execution>
+
+</executions>
+
+</plugin>
+
+        
+
+      </plugins>
+
+    </pluginManagement>
+
+   
+
+  
+
+   
+
+  
+
+   
+
+  </build>
+
+</project>
