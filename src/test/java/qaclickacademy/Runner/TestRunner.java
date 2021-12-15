@@ -54,8 +54,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 public class TestRunner {
 	  public static RemoteWebDriver connection;
-	String username = "pauljoyeesha9";
-	  String accessKey = "a4NF0JnHrYGrQJNNwJCZatlIGEZtdZ41k41BPyyurEjt6QKGN6";
+	//String username = "pauljoyeesha9";
+	//  String accessKey = "a4NF0JnHrYGrQJNNwJCZatlIGEZtdZ41k41BPyyurEjt6QKGN6";
 	 // driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
 		private TestNGCucumberRunner testNGCucumberRunner2;
 		public RemoteWebDriver driver = null;
@@ -65,6 +65,8 @@ public class TestRunner {
 		@org.testng.annotations.Parameters(value={"browser","version","platform"})
 	    public void setUp() throws Exception {
 		//{
+			 String username = System.getenv("LT_USERNAME") == null ? "YOUR LT_USERNAME" : System.getenv("LT_USERNAME"); 
+	            String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); 
 
 			try {
 		testNGCucumberRunner2=new TestNGCucumberRunner(this.getClass());
@@ -83,10 +85,15 @@ public class TestRunner {
 	  	  capabilities.setCapability("visual", true); // To enable step by step screenshot
 	  	  capabilities.setCapability("video", true); // To enable video recording
 	  	  capabilities.setCapability("console", true); // To capture console logs
-	       Base.driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
+	    //   Base.driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
 	       // String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
            // System.out.println(gridURL);
 	       // connection = new RemoteWebDriver(new URL(gridURL), capabilities);
+	  	 String gridURL = "https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub";
+         System.out.println(gridURL);
+         connection = new RemoteWebDriver(new URL(gridURL), capabilities);
+         System.out.println(capabilities);
+         System.out.println(connection);
            System.out.println(capabilities);
            System.out.println(connection);
 			} 

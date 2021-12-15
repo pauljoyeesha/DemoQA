@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="BDD Test Suite" verbose="1" parallel="tests" thread-count="3">
+ <test name="test1" annotations="JDK" preserve-order="true">
+  <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="92.0"/>
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="resolution" value="1024x768"/>
     <classes>
       <class name="qaclickacademy.Runner.TestRunner"/>
       <class name="qaclickacademy.StepDefinition.StepDefinition"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+
+    
