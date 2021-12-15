@@ -58,7 +58,8 @@ public class TestRunner {
 	  String accessKey = "a4NF0JnHrYGrQJNNwJCZatlIGEZtdZ41k41BPyyurEjt6QKGN6";
 	 // driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
 		private TestNGCucumberRunner testNGCucumberRunner2;
-
+		public RemoteWebDriver driver = null;
+		 
 		@BeforeClass(alwaysRun=true)
 		//public void setUpClass()throws Exception
 		@org.testng.annotations.Parameters(value={"browser","version","platform"})
@@ -74,14 +75,18 @@ public class TestRunner {
 	        capabilities.setCapability("browserName", "chrome");
 	        capabilities.setCapability("version", "70.0");
 	        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-	        capabilities.setCapability("build", "LambdaTestSampleApp");
-	        capabilities.setCapability("name", "LambdaTestJavaSample");
+	        capabilities.setCapability("build", "MavenJavaLambdaTest");
+	        capabilities.setCapability("name", "MavenJavaLambdaTest");
 	        //DesiredCapabilities capabilities = new DesiredCapabilities();
-	        capabilities.setCapability("tunnel", true);
-	     //  Base.driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
-	        String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
-            System.out.println(gridURL);
-	        connection = new RemoteWebDriver(new URL(gridURL), capabilities);
+	        //capabilities.setCapability("tunnel", true);
+	        capabilities.setCapability("network", true); // To enable network logs
+	  	  capabilities.setCapability("visual", true); // To enable step by step screenshot
+	  	  capabilities.setCapability("video", true); // To enable video recording
+	  	  capabilities.setCapability("console", true); // To capture console logs
+	       Base.driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), capabilities);
+	       // String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
+           // System.out.println(gridURL);
+	       // connection = new RemoteWebDriver(new URL(gridURL), capabilities);
            System.out.println(capabilities);
            System.out.println(connection);
 			} 
